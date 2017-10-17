@@ -7,6 +7,5 @@ RUN set -xe;\
    echo "root:admin" | chpasswd ;\
    sed -i -e "s/#PermitRootLogin.*$/PermitRootLogin yes/" /etc/ssh/sshd_config; \
    sed -i -e "s/#PasswordAuthentication.*$/PasswordAuthentication yes/" /etc/ssh/sshd_config;
-
-
-CMD /etc/init.d/sshd -D restart;
+   
+ENTRYPOINT service ssh restart && bash
