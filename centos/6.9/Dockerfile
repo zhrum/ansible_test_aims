@@ -13,4 +13,4 @@ RUN set -xe; \
 	ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key -N '' -t ecdsa ; 
 	
 
-CMD /usr/sbin/sshd -D	
+ENTRYPOINT /usr/sbin/sshd && bash	
