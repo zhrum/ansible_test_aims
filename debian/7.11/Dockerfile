@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:7.11
 
 RUN set -xe;\
    apt-get update; \ 
