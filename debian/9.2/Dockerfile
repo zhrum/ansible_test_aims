@@ -8,4 +8,4 @@ RUN set -xe;\
    sed -i -e "s/#PermitRootLogin.*$/PermitRootLogin yes/" /etc/ssh/sshd_config; \
    sed -i -e "s/#PasswordAuthentication.*$/PasswordAuthentication yes/" /etc/ssh/sshd_config;
    
-ENTRYPOINT service ssh restart && bash
+ENTRYPOINT service ssh start && bash

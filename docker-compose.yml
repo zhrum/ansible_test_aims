@@ -1,0 +1,29 @@
+version: '2'
+services:
+  centos6:
+    build: ./centos/6.9
+    tty: true
+    networks:
+      - ansible-net
+  centos7:
+    build: ./centos/7.4.1708
+    tty: true
+    networks:
+      - ansible-net
+  debian7:
+    build: ./debian/7.11
+    tty: true
+    networks:
+      - ansible-net
+  debian8:
+    build: ./debian/8.9
+    tty: true
+    networks:
+      - ansible-net
+  debian9:
+    build: ./debian/9.2
+    tty: true
+    networks:
+      - ansible-net
+networks:
+  ansible-net:
